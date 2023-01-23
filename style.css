@@ -2,6 +2,8 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
 }
 
 .box {
@@ -11,12 +13,29 @@
     font-size: 30px;
     margin: 10px;
     padding: 10px;
-    flex-shrink: 1;
-
+    width: min-content;
+  
   }
 
   .box-stretch {
     justify-content: stretch;
+    width: max-content;
+    max-width:100%
+  }
+
+  .box-start {
+    justify-content: start;
+    width: max-content;
+    max-width:100%
+  }
+  .box-end-mini {
+    display: flex;
+    justify-content: end;
+    width: min-content;
+    max-width:10%
+  }
+  .box :first-child{
+    width: 1px;
   }
 
   
@@ -26,35 +45,56 @@
   
   .flex-container-row {
     flex-direction: row;
-  
+    box-orient: horizontal;
+    flex-direction: row;
+    box-pack: center;
+    justify-content: start;
+    box-align: start;  
+    align-items: start;
+    background-color: red;
   }
+  .flex-container-row :first-child{
+    width: 1px;
+  }
+  
   .flex-container{
     background-color: rgb(100, 100, 255);
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
   }
-
+  .flex-container :first-child{
+    width: 150px;
+  }
   
-
   .mainbackground{
-    color: #fff;
-    max-width: 1024px;
-    margin: auto;
-    background-color: white;
+    color: yellow;
+    max-width: 100%;
+    margin: 10;
+    background-color: yellow;
   }
-  
-  .item-center{
-      text-align: center;
-      
+  body{
+    background-color: #ffd500;
+    margin: 0;
   }
+ 
 
   #headimg{
-    width: 100%;
-    vertical-align: bottom;
-    /*astuce pour supprimer l'espace blanc sous l'image
-    (dû au fait qu'une image, comme du texte, s'aligne sur une baseline)*/
-    height: 24em;
-    object-fit: cover;
-
+    max-width:100%
   }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 10px;
+  }
+
+
+  .image {
+    display: block;
+    object-fit: cover;
+    width: 100px;
+    height: 100px; /* set to 'auto' in IE11 to avoid distortions */
+  }
+  
+
