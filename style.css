@@ -1,0 +1,60 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+    flex-shrink: 1;
+
+  }
+
+  .box-stretch {
+    justify-content: stretch;
+  }
+
+  
+  .flex-container-column {
+    flex-direction: column;
+  }
+  
+  .flex-container-row {
+    flex-direction: row;
+  
+  }
+  .flex-container{
+    background-color: rgb(100, 100, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  
+
+  .mainbackground{
+    color: #fff;
+    max-width: 1024px;
+    margin: auto;
+    background-color: white;
+  }
+  
+  .item-center{
+      text-align: center;
+      
+  }
+
+  #headimg{
+    width: 100%;
+    vertical-align: bottom;
+    /*astuce pour supprimer l'espace blanc sous l'image
+    (dû au fait qu'une image, comme du texte, s'aligne sur une baseline)*/
+    height: 24em;
+    object-fit: cover;
+
+  }
