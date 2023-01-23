@@ -14,25 +14,34 @@
     margin: 10px;
     padding: 10px;
     width: min-content;
+    flex: 1 1 auto;
   
   }
 
   .box-stretch {
-    justify-content: stretch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: max-content;
-    max-width:100%
+    max-width:100%;
+    flex: 1 1 auto;
+
   }
 
   .box-start {
-    justify-content: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: max-content;
-    max-width:100%
+    max-width:100%;
+    flex: 1 1 auto;
+
   }
   .box-end-mini {
     display: flex;
     justify-content: end;
     width: min-content;
-    max-width:10%
+    max-width:100%
   }
   .box :first-child{
     width: 1px;
@@ -62,6 +71,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    flex: 1 1 auto;
+
+  }
+  .flex-container > *{
+    flex: 0 0 auto;
   }
   .flex-container :first-child{
     width: 150px;
@@ -91,10 +106,11 @@
 
 
   .image {
-    display: block;
+    display: flex;
     object-fit: cover;
-    width: 100px;
-    height: 100px; /* set to 'auto' in IE11 to avoid distortions */
+    width: 50%;
+    height: 50px; /* set to 'auto' in IE11 to avoid distortions */
+    flex: 1 1 auto;
   }
   
 
