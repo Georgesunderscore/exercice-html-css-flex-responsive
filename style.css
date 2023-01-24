@@ -1,116 +1,103 @@
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 
 }
 
 .box {
-    display: flex;
-    align-items: center ;
-    justify-content: center;
-    font-size: 30px;
-    margin: 10px;
-    padding: 10px;
-    width: min-content;
-    flex: 1 1 auto;
-  
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	margin: 10px;
+	padding: 10px;
+}
 
-  .box-stretch {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: max-content;
-    max-width:100%;
-    flex: 1 1 auto;
+.box-stretch {
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: max-content;
+	max-width: 100%;
 
-  }
+}
 
-  .box-start {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: max-content;
-    max-width:100%;
-    flex: 1 1 auto;
+.box-start {
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: max-content;
+	max-width: 100%;
 
-  }
-  .box-end-mini {
-    display: flex;
-    justify-content: end;
-    width: min-content;
-    max-width:100%
-  }
-  .box :first-child{
-    width: 1px;
-  }
+}
 
-  
-  .flex-container-column {
-    flex-direction: column;
-  }
-  
-  .flex-container-row {
-    flex-direction: row;
-    box-orient: horizontal;
-    flex-direction: row;
-    box-pack: center;
-    justify-content: start;
-    box-align: start;  
-    align-items: start;
-    background-color: red;
-  }
-  .flex-container-row :first-child{
-    width: 1px;
-  }
-  
-  .flex-container{
-    background-color: rgb(100, 100, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex: 1 1 auto;
+.box-end-mini {
+	justify-content: end;
+	width: min-content;
+	max-width: 100%
+}
 
-  }
-  .flex-container > *{
-    flex: 0 0 auto;
-  }
-  .flex-container :first-child{
-    width: 150px;
-  }
-  
-  .mainbackground{
-    color: yellow;
-    max-width: 100%;
-    margin: 10;
-    background-color: yellow;
-  }
-  body{
-    background-color: #ffd500;
-    margin: 0;
-  }
- 
-
-  #headimg{
-    max-width:100%
-  }
-
-  .grid-container{
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    padding: 10px;
-  }
+.box :first-child {
+	width: 1px;
+}
 
 
-  .image {
-    display: flex;
-    object-fit: cover;
-    width: 50%;
-    height: 50px; /* set to 'auto' in IE11 to avoid distortions */
-    flex: 1 1 auto;
-  }
-  
+.flex-container-column {
+	flex-direction: column;
+}
 
+
+
+.flex-container-row :first-child {
+	width: 200px;
+}
+
+.flex-container {
+	background-color: rgb(100, 100, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-container-row {
+	flex-direction: row;
+	align-items: start;
+}
+
+.flex-container>* {
+	flex: 1 1 auto;
+}
+
+
+
+.mainbackground {
+	color: yellow;
+	max-width: 100%;
+	margin: 10;
+	background-color: yellow;
+}
+
+body {
+	background-color: #ffd500;
+	margin: 0;
+}
+
+
+#headimg {
+	max-width: 100%
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	padding: 10px;
+}
+
+
+.image {
+	display: flex;
+	object-fit: cover;
+	width: 50%;
+	height: 50%;
+	/* set to 'auto' in IE11 to avoid distortions */
+
+}
