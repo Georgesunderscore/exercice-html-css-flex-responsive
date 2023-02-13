@@ -10,14 +10,38 @@
 
 
 
+.bluezone{
+    background-color: rgb(32, 32, 253);
+    color: #fff;
+}
+.text-center{
+    text-align: center;
+}
+.padded-element{
+    padding: 1em;
+    margin: 10;
+}
+
+nav{
+    border-bottom: 2px dashed #fff;
+    line-height: 3em;
+}
+nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 1em;
+}
 
 .box {
 
-	align-items: center;
-	justify-content: center;
-	font-size: 30px;
-	margin: 10px;
-	padding: 10px;
+
+	display: block;
+
+	max-width: 1024px;
+    margin: auto;
+    background-color: white;
+
+
 
 }
 
@@ -96,6 +120,9 @@
 	align-items: start;
 }
 
+.flex-container-center {
+	align-items: center;
+}
 
 
 .mainbackground {
@@ -104,6 +131,13 @@
 	margin: 10;
 	background-color: yellow;
 	flex-flow: flex column;
+	max-height: 100vh;
+	
+	/*correction wraps contenue */
+	max-width: 1024px;
+    margin: auto;
+    background-color: white;
+	/*correction wraps contenue */
 	
 
 }
@@ -120,10 +154,7 @@
 
 
 .image {
-	width: 100%;
-	height: 100%;
-	max-width: 100%;
-	height: auto;
+
 	margin: 3px;
 	padding: 3px;
 	/* set to 'auto' in IE11 to avoid distortions */
@@ -131,10 +162,20 @@
 }
 
 .itemheadimage {
-	float: center;
-	 width: 100vw; 
-	height: auto;
+	
 
+	width: 100%;
+    height: 24em;
+    object-fit: cover;
+
+}
+
+/*correction*/
+#banniere{
+    width: 100%;
+    height: 24em;
+    object-fit:cover;
+    /*l'image va se forcer à remplir son conteneur, quitte à rogner ses bords*/
 }
 
 
@@ -143,22 +184,29 @@
 	width: 120px;
 	height: 120px;
 	height: auto;
-	float: left;
+	
 	margin: 3px;
 	padding: 3px;
+	
+	object-fit: cover;
 }
 /* position fixed bootom 0*/
 .footer {
 	height: 20px;
 	font-size: 15px;
-	color: blue;
+	color: rgb(230, 9, 156);
+	text-align: right;
+	width: 100%;
+
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
-	text-align: right;
-	width: 100%;
 	
-	
+}
+.float-element{
+	float: right;
+
+
 }
 
   
@@ -167,4 +215,39 @@
 	color: blue;
 	flex-shrink: 0;
 
+}
+
+
+body{
+    background-color: #ffd500;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;/* possible retour à la ligne si un enfant déborde*/
+    align-items: flex-start;
+    /* l'alignement vertical des enfants de main démarre en haut, et n'aura
+    plus l'effet d'étirer (stretch) leur hauteur*/
+}
+
+
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery div{
+    flex: 1;
+    min-width: 150px;
+    border: 1px solid #888;
+    margin: 2px;
+}
+
+#gallery div img{
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
 }
